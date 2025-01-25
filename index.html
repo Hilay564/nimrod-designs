@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,15 +24,8 @@
             background-color: var(--light-color);
             color: var(--dark-color);
             scroll-behavior: smooth;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        .dark-mode {
-            background-color: var(--dark-color);
-            color: var(--light-color);
-        }
-
-        /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -45,25 +38,31 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-            .navbar .logo img {
-                height: 50px;
-            }
+        .navbar .logo img {
+            height: 80px; /* Increased default size */
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
 
-            .navbar nav a {
-                color: var(--secondary-color);
-                text-decoration: none;
-                font-weight: 600;
-                padding: 10px 20px;
-                margin: 0 10px;
-                border-radius: 5px;
-                transition: background-color 0.3s, color 0.3s;
-            }
+        .navbar .logo img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
 
-                .navbar nav a:hover,
-                .navbar nav a.active {
-                    background-color: var(--primary-color);
-                    color: #fff;
-                }
+        .navbar nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar nav a:hover,
+        .navbar nav a.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
 
         /* Hero Section */
         .hero {
@@ -79,79 +78,32 @@
             padding: 20px;
         }
 
-            .hero h1 {
-                font-size: 3.5rem;
-                margin-bottom: 20px;
-                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-                animation: fadeIn 2s ease-in-out;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-                max-width: 600px;
-                animation: fadeIn 3s ease-in-out;
-            }
-
-            .hero .btn {
-                background-color: var(--primary-color);
-                color: white;
-                padding: 15px 30px;
-                font-size: 1.1rem;
-                font-weight: 600;
-                text-decoration: none;
-                border-radius: 30px;
-                transition: background-color 0.3s;
-                animation: slideIn 4s ease-in-out;
-            }
-
-                .hero .btn:hover {
-                    background-color: var(--secondary-color);
-                }
-
-        /* Services Section */
-        .services {
-            text-align: center;
-            padding: 60px 20px;
-            background-color: var(--light-color);
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
-            .services h2 {
-                color: var(--secondary-color);
-                font-size: 2.5rem;
-                margin-bottom: 30px;
-            }
-
-        .service-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            justify-items: center;
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
         }
 
-        .card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 300px;
-            padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: left;
+        .hero .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
         }
 
-            .card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            }
-
-            .card img {
-                width: 100%;
-                border-radius: 10px;
-                height: 160px;
-                object-fit: cover;
-                margin-bottom: 15px;
-            }
+        .hero .btn:hover {
+            background-color: var(--secondary-color);
+        }
 
         /* Footer */
         .footer {
@@ -165,15 +117,15 @@
             gap: 10px;
         }
 
-            .footer a {
-                color: var(--primary-color);
-                text-decoration: none;
-                transition: color 0.3s;
-            }
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-                .footer a:hover {
-                    color: var(--secondary-color);
-                }
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
 
         .dark-mode-toggle {
             cursor: pointer;
@@ -187,15 +139,17 @@
             transition: background-color 0.3s;
         }
 
-            .dark-mode-toggle:hover {
-                background-color: var(--secondary-color);
-            }
+        .dark-mode-toggle:hover {
+            background-color: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <header class="navbar">
-        <a href="index.html" class="logo"><img src="https://i.imgur.com/6TVB00k.jpeg" alt="Nimrod Logo"></a>
+        <a href="index.html" class="logo">
+            <img src="https://i.imgur.com/6TVB00k.jpeg" alt="Nimrod Logo" id="logo">
+        </a>
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="aboutpage.html">About</a>
@@ -211,28 +165,6 @@
         <a href="#services" class="btn">Discover Our Services</a>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">
-                <img src="https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg" alt="Renovations">
-                <h3>Renovations</h3>
-                <p>High-quality renovations that redefine your living spaces.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.pexels.com/photos/6492394/pexels-photo-6492394.jpeg" alt="Plaster Works">
-                <h3>Plaster Works</h3>
-                <p>Expertly crafted finishes for walls and ceilings.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.pexels.com/photos/7031409/pexels-photo-7031409.jpeg" alt="Custom Solutions">
-                <h3>Custom Solutions</h3>
-                <p>Tailored services to meet your unique vision and style.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Nimrod Designs. All Rights Reserved.</p>
@@ -241,10 +173,22 @@
         <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </footer>
 
+    <!-- JavaScript -->
     <script>
+        // Toggle Dark Mode
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
+
+        // Logo Animation on Load
+        const logo = document.getElementById('logo');
+        window.addEventListener('load', () => {
+            logo.style.transition = 'transform 1s ease-in-out';
+            logo.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                logo.style.transform = 'scale(1)';
+            }, 1000);
+        });
     </script>
 </body>
 </html>
