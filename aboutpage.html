@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Nimrod Designs, our vision, mission, and expert team.">
+    <title>About Us | Nimrod Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e3a8a;
+            --light-color: #f9f9f9;
+            --dark-color: #333;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .navbar .logo img {
+                height: 50px;
+            }
+
+            .navbar nav a {
+                color: var(--secondary-color);
+                text-decoration: none;
+                font-weight: 600;
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+                .navbar nav a:hover,
+                .navbar nav a.active {
+                    background-color: var(--primary-color);
+                    color: #fff;
+                }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(to bottom, rgba(37, 99, 235, 0.6), rgba(255, 255, 255, 0.9)), url('https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--secondary-color);
+            padding: 20px;
+        }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+            .about-content h2 {
+                color: var(--secondary-color);
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                color: #555;
+            }
+
+        /* Team Section */
+        .team-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--light-color);
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            .team-card img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+
+            .team-card h3 {
+                font-size: 1.5rem;
+                color: var(--primary-color);
+                margin-bottom: 5px;
+            }
+
+            .team-card p {
+                font-size: 1rem;
+                color: #555;
+            }
+
+        /* Footer */
+        .footer {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+            .footer a {
+                color: var(--primary-color);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .footer a:hover {
+                    color: var(--secondary-color);
+                }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="HtmlPage1.html" class="logo"><img src="https://i.imgur.com/6TVB00k.jpeg" alt="Nimrod Logo"></a>
+        <nav>
+            <a href="HtmlPage1.html">Home</a>
+            <a href="aboutpage.html" class="active">About</a>
+            <a href="servicespage.html">Services</a>
+            <a href="contactpage.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About Nimrod Designs</h1>
+        <p>Learn more about our vision and expertise.</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-content">
+        <h2>Who We Are</h2>
+        <p>
+            Nimrod Designs is a leading renovation and design company specializing in transforming spaces into functional and aesthetically pleasing environments.
+            With years of experience, we take pride in delivering exceptional craftsmanship and tailored solutions for our clients.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to bring your vision to life through innovative designs, high-quality materials, and unparalleled attention to detail. Whether it’s a small update or a complete renovation, we’re here to make your dream space a reality.
+        </p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-card">
+            <img src="https://i.imgur.com/S2hk2HZ.jpeg" alt="Nimrod Banili">
+            <h3>Nimrod Banili</h3>
+            <p>Founder & CEO</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Nimrod Designs. All Rights Reserved.</p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+    </footer>
+</body>
+</html>

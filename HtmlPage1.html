@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nimrod Designs - Transforming visions into stunning spaces with innovation and expertise. High-quality renovations, plaster works, and custom solutions.">
+    <title>Nimrod Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://i.imgur.com/6TVB00k.jpeg" type="image/jpeg">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e3a8a;
+            --light-color: #f9f9f9;
+            --dark-color: #333;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .navbar .logo img {
+                height: 50px;
+            }
+
+            .navbar nav a {
+                color: var(--secondary-color);
+                text-decoration: none;
+                font-weight: 600;
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+                .navbar nav a:hover,
+                .navbar nav a.active {
+                    background-color: var(--primary-color);
+                    color: #fff;
+                }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(37, 99, 235, 0.6), rgba(255, 255, 255, 0.9)), url('https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--secondary-color);
+            padding: 20px;
+        }
+
+            .hero h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+                animation: fadeIn 2s ease-in-out;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+                max-width: 600px;
+                animation: fadeIn 3s ease-in-out;
+            }
+
+            .hero .btn {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-decoration: none;
+                border-radius: 30px;
+                transition: background-color 0.3s;
+                animation: slideIn 4s ease-in-out;
+            }
+
+                .hero .btn:hover {
+                    background-color: var(--secondary-color);
+                }
+
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--light-color);
+        }
+
+            .services h2 {
+                color: var(--secondary-color);
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .card img {
+                width: 100%;
+                border-radius: 10px;
+                height: 160px;
+                object-fit: cover;
+                margin-bottom: 15px;
+            }
+
+        /* Footer */
+        .footer {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .footer a {
+                color: var(--primary-color);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .footer a:hover {
+                    color: var(--secondary-color);
+                }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            .dark-mode-toggle:hover {
+                background-color: var(--secondary-color);
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="https://i.imgur.com/6TVB00k.jpeg" alt="Nimrod Logo"></a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="aboutpage.html">About</a>
+            <a href="servicespage.html">Services</a>
+            <a href="contactpage.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Nimrod Designs</h1>
+        <p>Transforming your visions into stunning spaces with innovation and expertise.</p>
+        <a href="#services" class="btn">Discover Our Services</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg" alt="Renovations">
+                <h3>Renovations</h3>
+                <p>High-quality renovations that redefine your living spaces.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/6492394/pexels-photo-6492394.jpeg" alt="Plaster Works">
+                <h3>Plaster Works</h3>
+                <p>Expertly crafted finishes for walls and ceilings.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/7031409/pexels-photo-7031409.jpeg" alt="Custom Solutions">
+                <h3>Custom Solutions</h3>
+                <p>Tailored services to meet your unique vision and style.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Nimrod Designs. All Rights Reserved.</p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
