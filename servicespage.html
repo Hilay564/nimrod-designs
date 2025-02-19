@@ -3,66 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="גלו את השירותים של נימרוד עיצובים, כולל שיפוצים, עבודות גבס ופתרונות מותאמים אישית.">
-    <title>השירותים שלנו | נימרוד עיצובים</title>
+    <meta name="description" content="Explore the services offered by Nimrod Designs, including renovations, plaster works, and custom solutions.">
+    <title>Our Services | Nimrod Designs</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo img {
+            height: 100px; /* Increased default size */
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .navbar .logo img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        .navbar nav a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar nav a:hover,
+        .navbar nav a.active {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .services h1 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            color: #1e3a8a;
+        }
+    </style>
 </head>
 <body>
-    <!-- ניווט -->
+    <!-- Navbar -->
     <header class="navbar">
         <a href="index.html" class="logo">
-            <img src="https://i.imgur.com/6TVB00k.jpeg" alt="לוגו נימרוד">
+            <img src="https://i.imgur.com/6TVB00k.jpeg" alt="Nimrod Logo">
         </a>
         <nav>
-            <a href="index.html">בית</a>
-            <a href="aboutpage.html">אודות</a>
-            <a href="servicespage.html" class="active">שירותים</a>
-            <a href="contactpage.html">צור קשר</a>
+            <a href="index.html">Home</a>
+            <a href="aboutpage.html">About</a>
+            <a href="servicespage.html" class="active">Services</a>
+            <a href="contactpage.html">Contact</a>
         </nav>
     </header>
 
-    <!-- אזור השירותים -->
+    <!-- Services Section -->
     <section class="services">
-        <h1>השירותים שלנו</h1>
+        <h1>העבודות שלנו</h1>
         <div class="service-cards">
             <div class="card">
-                <img src="https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg" alt="שיפוצים">
+                <img src="https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg" alt="Renovations">
                 <h3>שיפוצים</h3>
-                <p>אנו מספקים שיפוצים באיכות גבוהה, המשדרגים כל חלל לעיצוב ייחודי.</p>
+                <p>We provide top-quality renovations, transforming spaces into stunning designs.</p>
             </div>
             <div class="card">
-                <img src="https://images.pexels.com/photos/6492394/pexels-photo-6492394.jpeg" alt="עבודות גבס">
+                <img src="https://images.pexels.com/photos/6492394/pexels-photo-6492394.jpeg" alt="Plaster Works">
                 <h3>עבודות גבס</h3>
-                <p>גימורים מקצועיים לקירות ותקרות עם עיצוב מרשים.</p>
+                <p>Expert plaster finishes for walls and ceilings that stand out.</p>
             </div>
             <div class="card">
-                <img src="https://images.pexels.com/photos/7031409/pexels-photo-7031409.jpeg" alt="פתרונות מותאמים אישית">
-                <h3>פתרונות מותאמים אישית</h3>
-                <p>שירותים בהתאמה אישית שיתאימו בדיוק לחזון ולעיצוב שלכם.</p>
+                <img src="https://images.pexels.com/photos/7031409/pexels-photo-7031409.jpeg" alt="Custom Solutions">
+                <h3>Custom Solutions</h3>
+                <p>Tailored services to meet your unique vision and style.</p>
             </div>
         </div>
     </section>
 
-    <!-- תחתית הדף -->
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 נימרוד עיצובים. כל הזכויות שמורות.</p>
-        <a href="privacy.html">מדיניות פרטיות</a> |
-        <a href="terms.html">תנאי שימוש</a>
+        <p>&copy; 2025 Nimrod Designs. All Rights Reserved.</p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
     </footer>
-     <script>
-        // מצב כהה
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-        }
-
-        // שמירת מצב כהה בין רענונים
-        window.addEventListener('load', () => {
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.body.classList.add('dark-mode');
-            }
-        });
-    </script>
 </body>
 </html>
