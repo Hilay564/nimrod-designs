@@ -1,66 +1,218 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="צור קשר עם נימרוד עיצובים לכל שאלה או משוב.">
-    <title>צור קשר | נימרוד עיצובים</title>
+    <meta name="description" content="Contact Nimrod Designs for any inquiries or feedback.">
+    <title>Contact Us | Nimrod Designs</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e3a8a;
+            --light-color: #f9f9f9;
+            --dark-color: #333;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo img {
+            height: 100px;
+        }
+
+        .navbar nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar nav a:hover,
+        .navbar nav a.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(to bottom, rgba(37, 99, 235, 0.6), rgba(255, 255, 255, 0.9)), url('https://images.pexels.com/photos/3184160/pexels-photo-3184160.jpeg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--secondary-color);
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
 </head>
 <body>
-    <!-- ניווט -->
+    <!-- Navbar -->
     <header class="navbar">
-        <a href="index.html" class="logo"><img src="https://i.imgur.com/6TVB00k.jpeg" alt="לוגו נימרוד"></a>
+        <a href="index.html" class="logo"><img src="https://i.imgur.com/6TVB00k.jpeg" alt="Nimrod Logo"></a>
         <nav>
-            <a href="index.html">בית</a>
-            <a href="aboutpage.html">אודות</a>
-            <a href="servicespage.html">שירותים</a>
-            <a href="contactpage.html" class="active">צור קשר</a>
+            <a href="index.html">Home</a>
+            <a href="aboutpage.html">About</a>
+            <a href="servicespage.html">Services</a>
+            <a href="contactpage.html" class="active">Contact</a>
         </nav>
     </header>
 
-    <!-- אזור ראשי -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>צור קשר עם נימרוד עיצובים</h1>
-        <p>נשמח לשמוע ממך! צור קשר לכל שאלה או משוב.</p>
-        <a href="#contact-form">שלח הודעה</a>
+        <h1>Contact Nimrod Designs</h1>
+        <p>We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+        <a href="#contact-form">Get in Touch</a>
     </section>
 
-    <!-- טופס יצירת קשר -->
+    <!-- Contact Form -->
     <section class="contact-form" id="contact-form">
-        <h1>צור קשר</h1>
+        <h1>Contact Us</h1>
         <form action="#" method="post">
-            <label for="name">שם:</label>
-            <input type="text" id="name" name="name" placeholder="הזן את שמך" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="email">אימייל:</label>
-            <input type="email" id="email" name="email" placeholder="הזן את כתובת האימייל שלך" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="message">הודעה:</label>
-            <textarea id="message" name="message" rows="5" placeholder="כתוב כאן את הודעתך" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
 
-            <button type="submit">שלח הודעה</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <!-- תחתית הדף -->
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 נימרוד עיצובים. כל הזכויות שמורות.</p>
+        <p>&copy; 2025 Nimrod Designs. All Rights Reserved.</p>
     </footer>
-     <script>
-        // מצב כהה
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-        }
-
-        // שמירת מצב כהה בין רענונים
-        window.addEventListener('load', () => {
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.body.classList.add('dark-mode');
-            }
-        });
-    </script>
 </body>
 </html>
